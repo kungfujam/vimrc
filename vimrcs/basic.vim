@@ -1,5 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maintainer: 
+"       James Owers neé
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk
 "
@@ -139,6 +140,8 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" include numbered lines
+:set nu
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -167,6 +170,9 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" highlight over 79 chars
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%80v.\+/
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
